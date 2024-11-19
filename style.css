@@ -63,6 +63,54 @@
       outline: none;
       border: 1px solid #0376c9;
     }
+
+
+    .input-group {
+      display: flex; /* Align input and eye icon side by side */
+      align-items: center; /* Vertically center the input and icon */
+      width: 100%; /* Ensure full width for both input and icon */
+    }
+    
+    .input-group input {
+      flex-grow: 1; /* Allow the input to take the remaining space */
+      padding: 10px; /* Adjust padding for input */
+      border-radius: 5px !important; /* Apply a fully rounded border radius for the input */
+      border: 1px solid #ccc; /* Border for the input */
+      outline: none;
+      margin-right: 4px;
+    }
+    
+    .input-group .eye-icon {
+      padding: 10px !important;
+      margin-left: 10px; /* Adjust margin to avoid space between input and icon */
+      cursor: pointer; /* Pointer cursor for the icon */
+      color: #333; /* Icon color */
+      font-size: 1.2rem; /* Font size for the eye icon */
+      border-radius: 50%; /* Make the icon circular */
+    }
+    
+    /* .input-group i:hover {
+      background-color: red !important;
+    }
+     */
+    .btnBox {
+      margin-top: 20px;
+      text-align: center;
+    }
+    
+    .btnBox button {
+      padding: 15px 30px;
+      border-radius: 25px;
+      border: none;
+      background-color: #0376c9;
+      color: #fff;
+      cursor: pointer;
+    }
+    
+    
+    
+    
+
     .btnBox {
       margin: 30px 0;
       text-align: center;
@@ -78,6 +126,11 @@
     .btnBox button:disabled {
       background-color: #71c1fa9a;
     }
+
+    .eye-toggle {
+      all: unset;
+    }
+
 
     .text-center {
         text-align: center;
@@ -111,3 +164,43 @@
       margin: 0;
       font-size: 14px;
     }
+
+.progress-box {
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .form-box-main {
+    grid-template-columns: 1fr;
+  }
+
+  .input-form input {
+    width: 100%;
+
+  }
+}
+
+
+/* 
+    select addition */
+
+    /* Styling for the select dropdown */
+.phrase-select {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+.phrase-select:focus {
+  outline: none;
+  border: 1px solid #0376c9;
+  box-shadow: 0 0 5px rgba(3, 118, 201, 0.5);
+}
